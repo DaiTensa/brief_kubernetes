@@ -60,7 +60,7 @@ kubectl apply -R -f manifests/
 kubectl get pods -n dai-simplon
 ```
 7. Dans votre navigateur préféré accéder au backend
-[Docker](http://streamlit.local/) 
+[http://streamlit.local/](http://streamlit.local/) 
 
 ## Backend
 
