@@ -22,7 +22,7 @@ minikube version
 kubectl version --client
 ```
 
-## Installation est démarage
+## Installation est démarrage
 
 Aprés avoir cloner ce répo, déplacez vous dans le dossier **k8s** puis dans votre terminal :
 
