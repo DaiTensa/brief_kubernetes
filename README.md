@@ -52,6 +52,17 @@ ubectl config set-context --current --namespace=dai-simplon
 # Puis vérifier votre configuration
 kubectl config get-contexts
 ```
+Avant de déployer les ressources, configurer le fihcier hosts en suiavant les les étapes suivantes :
+
+```bash
+# Récupérer l'IP de votre clusteur Minikube avec la commande suivante
+minikube ip
+# Puis ajouter la ligne suivante dans le fichier /etc/hosts
+# 192.168.49.2    streamlit.local
+sudo nano /etc/hosts
+# CTR+O pour enregistrer  & CTRL+X pour quitter nano
+```
+
 6. Déployer les ressources Kubernetes
 ```bash
 kubectl apply -R -f manifests/
