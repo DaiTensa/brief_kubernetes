@@ -26,33 +26,33 @@ kubectl version --client
 
 Aprés avoir cloner ce répo, déplacez vous dans le dossier **k8s** puis dans votre terminal :
 
-1. Démarrer Minikube
+**1. Démarrer Minikube**
 ```bash
 minikube start
 ```
 
-2. Vérifier le bon fonctionnement de Minikube
+**2. Vérifier le bon fonctionnement de Minikube**
 ```bash
 kubectl get nodes
 ```
 
-3. Activer Ingress
+**3. Activer Ingress**
 ```bash
 minikube addons enable ingress
 ```
 
-4. Créer un namespace
+**4. Créer un namespace**
 ```bash
 kubectl apply -f manifests/namespace.yaml
 ```
-5. Configurer le namespace par défaut
+**5. Configurer le namespace par défaut**
 ```bash
 ubectl config set-context --current --namespace=dai-simplon
 
 # Puis vérifier votre configuration
 kubectl config get-contexts
 ```
-Avant de déployer les ressources, configurer le fihcier hosts en suiavant les les étapes suivantes :
+**Avant de déployer les ressources, configurer le fihcier hosts en suiavant les les étapes suivantes :**
 
 ```bash
 # Récupérer l'IP de votre clusteur Minikube avec la commande suivante
@@ -63,14 +63,15 @@ sudo nano /etc/hosts
 # CTR+O pour enregistrer  & CTRL+X pour quitter nano
 ```
 
-6. Déployer les ressources Kubernetes
+**6. Déployer les ressources Kubernetes**
 ```bash
 kubectl apply -R -f manifests/
 
 # Puis vérifier si les pods sont en fonctionnement
 kubectl get pods -n dai-simplon
 ```
-7. Dans votre navigateur préféré accéder au backend
+**7. Dans votre navigateur préféré accéder au backend**
+
 [http://streamlit.local/](http://streamlit.local/) 
 
 ## Backend
