@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: dai-simplon
+data:
+  DB_HOST: "db-svc"
+  DB_PORT: "3306"
+  USER_NAME: "user"
+  USER_PASSWORD: "password"
+  DB_NAME: "clients"
